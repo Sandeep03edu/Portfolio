@@ -15,7 +15,7 @@ export default function Shortcut(props) {
 
   return (
     <>
-      {isLargeScreen && (
+      {(
         <div
           className="card "
           style={{
