@@ -58,7 +58,7 @@ export default function ProjectItem(props) {
           textAlign: "center",
         }}
       >
-        <div className="grid" width="100%">
+        <div className="row center-container" width="100%">
           {props.urlsData &&
             props.urlsData.map((data) => {
               return (
