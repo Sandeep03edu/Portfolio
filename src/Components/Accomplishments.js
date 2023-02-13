@@ -8,7 +8,7 @@ export default function Accomplishments(props) {
         <li>
           Selected as a mentee for{" "}
           <b>
-            <a
+            <a style={{color:"white"}}  
               href="https://acehacker.com/microsoft/engage2022/"
               className="href"
             >
@@ -20,7 +20,7 @@ export default function Accomplishments(props) {
         <li>
           Shortlisted as top performers in{" "}
           <b>
-            <a
+            <a style={{color:"white"}}  
               href="https://unstop.com/hackathon/hackathon-jumpstart-publicis-sapient-359785?utm_campaign=hackathons&utm_medium=d2c-customized&ref_id=opp_359785&utm_source=o_359785"
               className="hred"
             >
@@ -33,7 +33,7 @@ export default function Accomplishments(props) {
           <li>
             Secured a global rank{" "}
             <b>
-              <a
+              <a style={{color:"white"}}  
                 href="https://www.codechef.com/rankings/COOK143B?itemsPerPage=100&order=asc&page=1&search=sandeep03edu&sortBy=rank"
                 className="href"
               >
@@ -42,7 +42,7 @@ export default function Accomplishments(props) {
             </b>{" "}
             in <b>Codechef July Cook-Off Div-2</b> and rank&nbsp;
             <b>
-              <a
+              <a style={{color:"white"}}  
                 href="https://www.codechef.com/rankings/START39B?itemsPerPage=100&order=asc&page=1&search=Sandeep03edu&sortBy=rank"
                 className="href"
               >
@@ -54,7 +54,7 @@ export default function Accomplishments(props) {
           <li>
             Secured a global rank{" "}
             <b>
-              <a
+              <a style={{color:"white"}}  
                 href="https://codeforces.com/contest/1729/standings"
                 className="href"
               >
@@ -64,7 +64,7 @@ export default function Accomplishments(props) {
             </b>{" "}
             in <b>Codeforces Round 820</b> and rank{" "}
             <b>
-              <a
+              <a style={{color:"white"}}  
                 href="https://codeforces.com/contest/1742/standings"
                 className="href"
               >
@@ -77,7 +77,7 @@ export default function Accomplishments(props) {
           <li>
             <b>4 Star on Codechef</b> with max rating{" "}
             <b>
-              <a
+              <a style={{color:"white"}}  
                 href="https://www.codechef.com/users/sandeep03edu"
                 className="href"
               >
@@ -86,7 +86,7 @@ export default function Accomplishments(props) {
             </b>
             , <b>Specialist on Codeforces</b> with max rating{" "}
             <b>
-              <a
+              <a style={{color:"white"}}  
                 href="https://codeforces.com/profile/sandeep03edu"
                 className="href"
               >
@@ -95,7 +95,7 @@ export default function Accomplishments(props) {
             </b>{" "}
             and <b>6 Kyu on Atcoder</b> with max rating{" "}
             <b>
-              <a target="_blank" style={{color:"white"}}  rel="noreferrer" href="https://atcoder.jp/users/sandeep03edu" className="href">
+              <a style={{color:"white"}}   target="_blank" rel="noreferrer" href="https://atcoder.jp/users/sandeep03edu" className="href">
                 {" "}
                 912
               </a>
@@ -107,7 +107,7 @@ export default function Accomplishments(props) {
             candidates in JEE Advanced 2020.
           </li>
           <li>
-            Honoured by <b><a target="_blank" style={{color:"white"}}  rel="noreferrer" href="https://twitter.com/msisodia/status/1319999572953890816" className="href"> Delhi Chief Minister and Deputy Cheif minister</a></b> for
+            Honoured by <b><a style={{color:"white"}}   target="_blank"   rel="noreferrer" href="https://twitter.com/msisodia/status/1319999572953890816" className="href"> Delhi Chief Minister and Deputy Cheif minister</a></b> for
             clearing JEE Advance exam without any coaching from government
             school in 2020.
           </li>

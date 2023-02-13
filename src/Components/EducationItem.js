@@ -45,7 +45,7 @@ export default function EducationItem(props) {
         }}
       >
         <h4>
-          <a href={props.url} target="_blank" rel="noreferrer">
+          <a href={props.url} style={{color:"white"}}   target="_blank" rel="noreferrer">
             More Details
           </a>
         </h4>
