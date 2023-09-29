@@ -42,3 +42,22 @@
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.carousel-indicators [data-bs-target] {
+    background-color: #000;
+    width:30px
+}
+
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(0, 0, 0);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(0, 0, 0);
+}
