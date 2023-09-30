@@ -18,13 +18,11 @@ export default function Project(props) {
     >
       <h2
         style={{
-          fontFamily: "Manrope",
-          fontWeight: "700",
-          fontSize: 50,
           marginTop: "1%",
           marginBottom: "2%",
+          fontFamily: "Manrope",
         }}
-        className="center-container my-4 "
+        className="header-style center-container my-2 "
       >
         Projects
       </h2>
@@ -85,7 +83,8 @@ export default function Project(props) {
             <ProjectItem
               cardBackground={cardBackgroundColor}
               textColor={textColor}
-              type="Prof. Joydeep Chandra (IIT Patna)"
+              // type="Prof. Joydeep Chandra (IIT Patna)"
+              type="Prof. Joydeep Chandra"
               imageUrl={process.env.PUBLIC_URL + "/cawach.png"}
               name="Cawach"
               details={[

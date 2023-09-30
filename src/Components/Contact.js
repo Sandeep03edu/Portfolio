@@ -6,26 +6,31 @@ export default function Contact(props) {
 
   return (
     <div
-      className="shadow rounded"
       style={{
-        margin: "0% 5%",
-        padding: "2% 2%",
-        backgroundColor: props.cardBackground,
+        marginTop: "8%",
+        paddingBottom: "2%",
         color: props.textColor,
+        backgroundColor: "#000",
       }}
     >
-      <h3 className="center-container">Contact Me</h3>
-
-      <div
-        className="container m-4 p-2"
-        style={{ backgroundColor: cardBackgroundColor, color: textColor }}
+      <h2
+        style={{
+          marginTop: "1%",
+          marginBottom: "2%",
+          paddingTop: "2%",
+          color: "#fff",
+          fontFamily: "Manrope",
+        }}
+        className="center-container my-2 header2-style"
       >
-        <div className="row ">
-          <div className="col-md-8">col1</div>
-          
-          <div className="col-md-4"> Col2</div>
-        </div>
-      </div>
+        Sandeep Mishra
+      </h2>
+      <h2
+        style={{ color: "#fff" }}
+        className="center-container my-2 header3-style "
+      >
+        Created by @Sandeep03edu
+      </h2>
     </div>
   );
 }

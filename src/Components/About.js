@@ -4,7 +4,7 @@ export default function About(props) {
   return (
     <div
       id="aboutSection"
-      className="shadow p-3  rounded"
+      className="shadow p-3 rounded"
       style={{
         margin: "2% 1%",
         backgroundColor: props.cardBackground,
@@ -19,16 +19,21 @@ export default function About(props) {
         }}
       >
         <h1
-          className="center-container"
-          
-          style={{ fontFamily: "Manrope", fontWeight: "700", fontSize: 50 }}
+          className="center-container header-style"
+          style={{ fontFamily: "Manrope" }}
         >
           About Me!
         </h1>
 
         <div className="col-md-8" style={{ marginTop: "3%" }}>
           <p>
-            <p style={{ fontFamily: "Cormorant Garamond", fontSize: 22 }}>
+            <p
+              style={{
+                fontFamily: "Cormorant Garamond",
+                fontSize: "1.25rem",
+                fontWeight: 300,
+              }}
+            >
               My name is Sandeep Mishra.
               <br />I am an undergraduate student at{" "}
               <b>Indian Institute Of Technology (IIT), Patna</b>.
@@ -37,7 +42,13 @@ export default function About(props) {
               Engineering (2020-2024).
             </p>
             <br />
-            <p style={{ fontFamily: "Poppins", fontSize: 20 }}>
+            <p
+              style={{
+                fontFamily: "Poppins",
+                fontSize: "1.1rem",
+                fontWeight: 300,
+              }}
+            >
               I am majorly a <b>Mobile Developer</b> (Native + Hybrid), I have
               experience in both Mobile Developement and Web Development and
               currently exploring <b>Mobile CyberSecurity</b>.
@@ -54,11 +65,14 @@ export default function About(props) {
             </p>
           </p>
         </div>
-        <div className="col-md-4">
+        <div
+          className="col-md-4"
+          style={{ display: "flex", alignItems: "center" }}
+        >
           <img
             src={process.env.PUBLIC_URL + "/person_avatar.jpg"}
             alt="about"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%" }}
           />
         </div>
       </div>

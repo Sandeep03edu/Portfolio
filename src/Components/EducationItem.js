@@ -35,10 +35,7 @@ export default function EducationItem(props) {
             textAlign: "center",
           }}
         >
-          <h5
-            className="my-2 centered"
-            style={{ fontFamily: "Manrope", fontWeight: "700", fontSize: 35 }}
-          >
+          <h5 className="my-2 centered header2-style ">
             <b>{props.schoolName}</b>
           </h5>
         </div>
@@ -48,10 +45,7 @@ export default function EducationItem(props) {
               props.details.map((data) => {
                 return (
                   <ul>
-                    <li
-                      style={{ fontFamily: "Poppins", fontSize: 20 }}
-                      key={data}
-                    >
+                    <li className="description-style" key={data}>
                       {data}
                     </li>
                   </ul>
@@ -66,8 +60,8 @@ export default function EducationItem(props) {
         >
           <h4>
             <a
+              className="bold-underline-link"
               href={props.url}
-              style={{ color: "#000" }}
               target="_blank"
               rel="noreferrer"
             >

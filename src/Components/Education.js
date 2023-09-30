@@ -16,8 +16,8 @@ export default function Education(props) {
       }}
     >
       <h2
-        className="center-container"
-        style={{ fontFamily: "Manrope", fontWeight: "700", fontSize: 50 }}
+        className="center-container header-style"
+        style={{ fontFamily: "Manrope" }}
       >
         Education
       </h2>

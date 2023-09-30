@@ -17,11 +17,9 @@ export default function Experience(props) {
       }}
     >
       <h2
-        className="center-container"
+        className="center-container header-style"
         style={{
-          fontFamily: "Manrope",
-          fontWeight: "700",
-          fontSize: 50,
+          fontFamily:"Manrope",
           marginTop: "1%",
           marginBottom: "2%",
         }}

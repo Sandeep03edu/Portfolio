@@ -7,31 +7,28 @@ export default function ExperienceItem(props) {
       height="200px"
       style={{ backgroundColor: props.cardBackground, color: props.textColor }}
     >
-      <div className="col-md-4">
+      <div className="col-md-3">
         <div
           style={{
             textAlign: "center",
           }}
         >
           <img
-            height={"250px"}
-            width={"250px"}
+            width={"80%"}
             style={{ borderRadius: "50%" }}
             className="my-1"
             src={props.imageUrl}
             alt="experienceImage"
           />
 
-          <h5 className="m-1">{props.name}</h5>
+          <h5 className="m-1 header2-style mb-4">{props.name}</h5>
         </div>
       </div>
 
-      <div className="col-md-8">
+      <div className="col-md-9">
         <h5
+          className=" header3-style"
           style={{
-            fontFamily: "Manrope",
-            fontWeight: "700",
-            fontSize: 35,
             marginLeft: "5%",
           }}
         >
@@ -43,36 +40,27 @@ export default function ExperienceItem(props) {
             {props.details &&
               props.details.map((data) => {
                 return (
-                  <li
-                    style={{ fontFamily: "Poppins", fontSize: 20 }}
-                    key={data}
-                  >
+                  <li className="description-style" key={data}>
                     {data}
                   </li>
                 );
               })}
 
-            <li style={{ fontFamily: "Manrope", fontSize: 18 }}>
+            <li className="description-style">
               <b>Duration: </b>
               {props.duration}
             </li>
             <li
+              className="description-style"
               style={{
                 display: props.languageUsed == null ? "none" : "",
-                fontFamily: "Manrope",
-                fontSize: 18,
               }}
             >
               <b>Languages Used: </b>
               {props.languageUsed}
             </li>
             {props.toolsUsed ? (
-              <li
-                style={{
-                  fontFamily: "Manrope",
-                  fontSize: 18,
-                }}
-              >
+              <li className="description-style">
                 <b>Tools Used: </b>
                 {props.toolsUsed}
               </li>
@@ -97,6 +85,7 @@ export default function ExperienceItem(props) {
               href={props.url}
               target="_blank"
               rel="noreferrer"
+              className="bold-underline-link"
               style={{ color: props.textColor }}
             >
               {props.urlType}

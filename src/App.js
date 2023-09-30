@@ -7,7 +7,8 @@ import Intro from "./Components/Intro";
 import Header from "./Components/Header";
 // import Navbar from "./Components/Navbar";
 import Project from "./Components/Project";
-import Shortcut from "./Components/Shortcut";
+import CompetitiveSkills from "./Components/CompetitiveSkills";
+import Contact from "./Components/Contact";
 // import Contact from "./Components/Contact";
 
 function App() {
@@ -24,17 +25,19 @@ function App() {
       {/* <Navbar/> */}
       <Intro cardBackground={cardBackgroundColor} textColor={textColor} />
       <About cardBackground={cardBackgroundColor} textColor={textColor} />
+      <Accomplishments
+        cardBackground={cardBackgroundColor}
+        textColor={textColor}
+      />
       <Education cardBackground={cardBackgroundColor} textColor={textColor} />
       <Experience cardBackground={cardBackgroundColor} textColor={textColor} />
       <Project cardBackground={cardBackgroundColor} textColor={textColor} />
-      {/* <Accomplishments
+      <CompetitiveSkills
         cardBackground={cardBackgroundColor}
         textColor={textColor}
-      /> */}
-      {/* <Contact cardBackground={cardBackgroundColor} textColor={textColor} /> */}
-      <div style={{marginBottom:200}}>
-
-      </div>
+      />
+      <Contact cardBackground={cardBackgroundColor} textColor={textColor} />
+      {/* <div style={{ paddingBottom: 200 }}></div> */}
     </div>
   );
 }
