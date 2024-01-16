@@ -7,10 +7,6 @@ export default function EducationItem(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        cursor: "pointer",
-      }}
-      onClick={() => {
-        window.open(props.url, "_blank");
       }}
     >
       <div
@@ -38,6 +34,10 @@ export default function EducationItem(props) {
         <div
           style={{
             textAlign: "center",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            window.open(props.url, "_blank");
           }}
         >
           <p className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
@@ -50,6 +50,10 @@ export default function EducationItem(props) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            window.open(props.url, "_blank");
           }}
         >
           <img
