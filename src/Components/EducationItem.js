@@ -7,6 +7,10 @@ export default function EducationItem(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        cursor: "pointer",
+      }}
+      onClick={() => {
+        window.open(props.url, "_blank");
       }}
     >
       <div
@@ -36,7 +40,7 @@ export default function EducationItem(props) {
             textAlign: "center",
           }}
         >
-          <p className="my-2 mx-0 centered" style={{fontSize:"1.35rem"}}>
+          <p className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
             <b>{props.schoolName}</b>
           </p>
         </div>
