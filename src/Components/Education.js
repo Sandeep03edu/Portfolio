@@ -14,7 +14,7 @@ export default function Education(props) {
           marginLeft: "1%",
           backgroundColor: props.cardBackground,
           color: props.textColor,
-          width: "70%",
+          width: "80%",
         }}
       >
         <h2

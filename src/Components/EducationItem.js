@@ -45,7 +45,7 @@ export default function EducationItem(props) {
           </p>
         </div>
         <div
-          className="col-lg-6 col-xl-5 rounded"
+          className="col-lg-5 col-xl-4 rounded"
           style={{
             display: "flex",
             justifyContent: "center",
@@ -60,7 +60,7 @@ export default function EducationItem(props) {
           />
         </div>
 
-        <div className="col-lg-6 col-xl-7">
+        <div className="col-lg-7 col-xl-8">
           <div className="container my-3">
             {props.details &&
               props.details.map((data, index) => (
