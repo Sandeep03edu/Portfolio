@@ -84,7 +84,7 @@ export default function ExperienceItem(props) {
             </div>
           </div>
         </div>
-        <div className="container my-3 row mx-0">
+        <div className="container my-1 row mx-0">
           {props.details2 &&
             props.details2.map((data, index) => {
               return (
@@ -125,7 +125,7 @@ export default function ExperienceItem(props) {
       >
         <button
           type="button"
-          class="btn btn-outline-primary"
+          className="btn btn-outline-primary"
           onClick={(e) => {
             window.open(props.url, "_blank");
           }}

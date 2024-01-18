@@ -15,93 +15,123 @@ export default function ProjectItem(props) {
 
   return (
     <div
-      className=" p-2 p-3 mb-5 row "
-      height="200px"
-      style={{ backgroundColor: props.cardBackground, color: props.textColor }}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
     >
+      <p className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
+        <h3>{props.name}</h3>
+      </p>
       <div
-        className="col-md-4"
+        className="px-3 py-0 mb-5 row"
         style={{
-          textAlign: "center",
+          backgroundColor: props.cardBackground,
+
+          color: props.textColor,
         }}
       >
-        <img
-          height={"80%"}
-          width={"80%"}
-          style={{ borderRadius: "50%" }}
-          className="my-1"
-          src={props.imageUrl}
-          alt="projectImage"
-        />
-        <h5 className="header2-style mb-4 mt-4">{props.type}</h5>
-      </div>
-
-      <div className="col-md-8 ">
-        <h5 className="header3-style">{props.name}</h5>
-
-        <div className="container my-3">
-          <ul>
-            {props.details &&
-              props.details.map((data) => {
-                return (
-                  <li className="description-style" key={data}>
-                    {data}
-                  </li>
-                );
-              })}
-
-            <li className="description-style">
-              <b>Languages Used: </b>
-              {props.language}
-            </li>
-            <li className="description-style">
-              <b>Tools Used: </b>
-              {props.tools}
-            </li>
-          </ul>
-        </div>
-
         <div
-          className="row center-container"
-          width="100%"
+          className="col-md-6 col-lg-5 col-xl-3"
           style={{
+            textAlign: "center",
             display: "flex",
-            alignItems: "start",
-            alignContent: "start",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          {props.urlsData &&
-            props.urlsData.map((data) => {
-              return (
-                <div
-                  key={data.url}
-                  // className={urlClass}
-                  style={{
-                    width: "auto",
-                    paddingLeft: 30,
-                    paddingRight: 30,
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    backgroundColor: "#0C0084",
-                    borderRadius: 60,
-                    display: "flex",
-                  }}
-                >
-                  <a
-                    target="_blank"
-                    style={{
-                      color: "#fff",
-                      height: 20,
+          <img
+            height={"auto"}
+            width={"100%"}
+            src={props.imageUrl}
+            alt="projectImage"
+            className="mx-2"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              window.open(props.imageUrl);
+            }}
+          />
+          <div
+            className="row center-container py-2 px-0"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "flex",
+              alignItems: "start",
+              alignContent: "start",
+            }}
+          >
+            {props.urlsData &&
+              props.urlsData.map((data) => {
+                return (
+                  <button
+                    key={data.url}
+                    type="button"
+                    className="btn btn-outline-primary"
+                    onClick={(e) => {
+                      window.open(data.url, "_blank");
                     }}
-                    rel="noreferrer"
-                    href={data.url}
-                    className="bold-underline-link"
+                    style={{ width: "auto" }}
                   >
-                    <p>{data.type}</p>
-                  </a>
-                </div>
-              );
-            })}
+                    {data.type}
+                  </button>
+                );
+              })}
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-7 col-xl-9">
+          <div
+            className="container my-3"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            {/* <ul> */}
+            {props.details &&
+              props.details.map((data, index) => {
+                return (
+                  <div
+                    className="mb-2 p-0"
+                    key={index}
+                    style={{ width: "100%" }}
+                  >
+                    <div className="form-floating p-0 m-0">
+                      <div
+                        className="form-control"
+                        id={`dataDisplay_${index}`}
+                        style={{
+                          fontSize: "1rem",
+                          height: "100%",
+                          overflowY: "auto",
+                        }}
+                      >
+                        {data &&
+                          data.map((res, idx) => {
+                            return (
+                              idx !== 0 && <p className="m-0 p-0">{res}</p>
+                            );
+                          })}
+                      </div>
+
+                      <label
+                        htmlFor={`dataDisplay_${index}`}
+                        style={{ fontSize: "1rem" }}
+                      >
+                        {data[0]}
+                      </label>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </div>
     </div>
