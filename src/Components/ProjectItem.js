@@ -51,7 +51,7 @@ export default function ProjectItem(props) {
             className="mx-2"
             style={{ cursor: "pointer" }}
             onClick={() => {
-              window.open(props.imageUrl);
+              window.open(props.imageClickUrl);
             }}
           />
           <div
@@ -70,7 +70,7 @@ export default function ProjectItem(props) {
                   <button
                     key={data.url}
                     type="button"
-                    className="btn btn-outline-primary"
+                    className="btn btn-outline-primary m-1"
                     onClick={(e) => {
                       window.open(data.url, "_blank");
                     }}
