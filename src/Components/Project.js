@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectItem from "./ProjectItem";
 
 export default function Project(props) {
   let cardBackgroundColor = "#fff";
   let textColor = "#000";
+
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -30,7 +32,7 @@ export default function Project(props) {
         </h2>
 
         <div>
-          <div>
+          <div className="mt-4">
             <div>
               <ProjectItem
                 cardBackground={cardBackgroundColor}
@@ -98,68 +100,87 @@ export default function Project(props) {
               />
             </div>
 
-            <div>
-              <ProjectItem
-                cardBackground={cardBackgroundColor}
-                textColor={textColor}
-                imageUrl={"https://i.imgur.com/LBWu3ds.jpg"}
-                imageClickUrl={"https://i.imgur.com/LBWu3ds.jpg"}
-                name="Testa - Obscene Media Detector"
-                details={[
-                  ["Mentor", "Prof. Joydeep Chandra"],
-                  [
-                    "Work",
-                    "Applied Tensorflow ML model in android for practical application",
-                    "Fetched user media files and checked their obscenity score",
-                    "Filtered obscene images of a directory and outputed report in pdf format.",
-                  ],
-                  ["Language used", "Java, C++, XML"],
-                  ["Tools used", "Firebase"],
-                ]}
-                urlsData={[
-                  {
-                    url: "https://drive.google.com/file/d/1DgB_CjH5wZx87YbF1mVrIThU9H8ziaxE/view",
-                    type: "Certificate",
-                  },
-                  {
-                    url: "https://github.com/Sandeep03edu/ocd_module_deployment",
-                    type: "Github",
-                  },
-                ]}
-              />
-            </div>
-            <div>
-              <ProjectItem
-                cardBackground={cardBackgroundColor}
-                textColor={textColor}
-                imageUrl={"https://i.imgur.com/OKfgAPO.png"}
-                imageClickUrl={"https://i.imgur.com/OKfgAPO.png"}
-                name="Face Disease Recognition"
-                details={[
-                  ["Event", "Microsoft Engage'22"],
-                  [
-                    "Work",
-                    "Android application to detect facial disease using OpenCv and ML models.",
-                    "Spllited face into 68 landmarks and cropping each face part for disease detection.",
-                    "Uploading user's data in backend to display past history for future analysis",
-                    "Displayed Advertisements from backend based on Age and gender of persons standing in front of it",
-                  ],
-                  ["Language used", "Java, C++, XML"],
-                  ["Tools used", "Firebase, OpenCv"],
-                ]}
-                language="Java, C++, XML"
-                tools="Firebase, OpenCv"
-                urlsData={[
-                  {
-                    url: "https://github.com/Sandeep03edu/FaceRecognition/",
-                    type: "Github",
-                  },
-                  {
-                    url: "https://user-images.githubusercontent.com/73837113/170855211-7e096c32-e890-4ae4-a1ae-1b07df3bab86.jpg",
-                    type: "Flow Chart",
-                  },
-                ]}
-              />
+            <button
+              type="button"
+              className="btn btn-secondary my-2"
+              style={{
+                width: "100%",
+                display: showAllProjects === true ? "none" : "block",
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowAllProjects(!showAllProjects);
+              }}
+            >
+              Show All
+            </button>
+
+            <div
+              style={{ display: showAllProjects === true ? "block" : "none" }}
+            >
+              <div>
+                <ProjectItem
+                  cardBackground={cardBackgroundColor}
+                  textColor={textColor}
+                  imageUrl={"https://i.imgur.com/LBWu3ds.jpg"}
+                  imageClickUrl={"https://i.imgur.com/LBWu3ds.jpg"}
+                  name="Testa - Obscene Media Detector"
+                  details={[
+                    ["Mentor", "Prof. Joydeep Chandra"],
+                    [
+                      "Work",
+                      "Applied Tensorflow ML model in android for practical application",
+                      "Fetched user media files and checked their obscenity score",
+                      "Filtered obscene images of a directory and outputed report in pdf format.",
+                    ],
+                    ["Language used", "Java, C++, XML"],
+                    ["Tools used", "Firebase"],
+                  ]}
+                  urlsData={[
+                    {
+                      url: "https://drive.google.com/file/d/1DgB_CjH5wZx87YbF1mVrIThU9H8ziaxE/view",
+                      type: "Certificate",
+                    },
+                    {
+                      url: "https://github.com/Sandeep03edu/ocd_module_deployment",
+                      type: "Github",
+                    },
+                  ]}
+                />
+              </div>
+              <div>
+                <ProjectItem
+                  cardBackground={cardBackgroundColor}
+                  textColor={textColor}
+                  imageUrl={"https://i.imgur.com/OKfgAPO.png"}
+                  imageClickUrl={"https://i.imgur.com/OKfgAPO.png"}
+                  name="Face Disease Recognition"
+                  details={[
+                    ["Event", "Microsoft Engage'22"],
+                    [
+                      "Work",
+                      "Android application to detect facial disease using OpenCv and ML models.",
+                      "Spllited face into 68 landmarks and cropping each face part for disease detection.",
+                      "Uploading user's data in backend to display past history for future analysis",
+                      "Displayed Advertisements from backend based on Age and gender of persons standing in front of it",
+                    ],
+                    ["Language used", "Java, C++, XML"],
+                    ["Tools used", "Firebase, OpenCv"],
+                  ]}
+                  language="Java, C++, XML"
+                  tools="Firebase, OpenCv"
+                  urlsData={[
+                    {
+                      url: "https://github.com/Sandeep03edu/FaceRecognition/",
+                      type: "Github",
+                    },
+                    {
+                      url: "https://user-images.githubusercontent.com/73837113/170855211-7e096c32-e890-4ae4-a1ae-1b07df3bab86.jpg",
+                      type: "Flow Chart",
+                    },
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>
