@@ -88,7 +88,7 @@ export default function Project(props) {
               <ProjectItem
                 cardBackground={cardBackgroundColor}
                 textColor={textColor}
-                imageUrl={"https://i.imgur.com/LBWu3ds.jpg"}
+                imageUrl={"https://i.imgur.com/t5j9oqF.jpg"}
                 name="Highway-Watch"
                 details={[
                   ["Organization", "Manipur Police"],

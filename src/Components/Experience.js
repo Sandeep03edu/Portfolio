@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ExperienceItem from "./ExperienceItem";
 
 export default function Experience(props) {
   let cardBackgroundColor = "#fff";
   let textColor = "#000";
+
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -81,51 +83,70 @@ export default function Experience(props) {
               />
             </div>
 
-            <div>
-              <ExperienceItem
-                cardBackground={cardBackgroundColor}
-                textColor={textColor}
-                organization="Shree Ramsena"
-                urlType="Play Store"
-                imageUrl={process.env.PUBLIC_URL + "/ramsena.png"}
-                url="https://play.google.com/store/apps/details?id=com.ramsena.android"
-                details={[
-                  ["Role", "Internship"],
-                  ["Duration", "January 2022 - May 2023"],
-                ]}
-                details2={[
-                  [
-                    "Work",
-                    "Created complete Social Media app using PHP Apis and later with Firebase, with user interest's post.",
-                    "Implemented live chat feature with encryption, super user role, Admin features.",
-                    "Implemented one-one and one-many personalised notifcation (custom and automatic).",
-                  ],
-                  ["Tools Used", "Firebase, FCM , Retrofit"],
-                  ["Language Used", "Java, XML"],
-                ]}
-              />
-            </div>
-            <div>
-              <ExperienceItem
-                cardBackground={cardBackgroundColor}
-                textColor={textColor}
-                organization="NJACK IIT Patna"
-                urlType="NJACK - Website"
-                imageUrl={process.env.PUBLIC_URL + "/njack.jpg"}
-                url="https://njack.iitp.ac.in/"
-                details={[
-                  ["Role", "Club Coordinator"],
-                  ["Duration", "October 2021 - May 2023"],
-                ]}
-                details2={[
-                  [
-                    "Work",
-                    "Coordinator of Not Just Another Coding Klub (NJACK) DEV and Open-Source department.",
-                    "Organised India's one of the biggest Month long Hackathon - Codepeak (formly NWOC) with IIT Guwahati's Coding Club.",
-                    "Organized various dev related events in college.",
-                  ],
-                ]}
-              />
+            <button
+              type="button"
+              className="btn btn-secondary my-2"
+              style={{
+                width: "100%",
+                display: showAllProjects === true ? "none" : "block",
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowAllProjects(!showAllProjects);
+              }}
+            >
+              Show All
+            </button>
+
+            <div
+              style={{ display: showAllProjects === true ? "block" : "none" }}
+            >
+              <div>
+                <ExperienceItem
+                  cardBackground={cardBackgroundColor}
+                  textColor={textColor}
+                  organization="Shree Ramsena"
+                  urlType="Play Store"
+                  imageUrl={process.env.PUBLIC_URL + "/ramsena.png"}
+                  url="https://play.google.com/store/apps/details?id=com.ramsena.android"
+                  details={[
+                    ["Role", "Internship"],
+                    ["Duration", "January 2022 - May 2023"],
+                  ]}
+                  details2={[
+                    [
+                      "Work",
+                      "Created complete Social Media app using PHP Apis and later with Firebase, with user interest's post.",
+                      "Implemented live chat feature with encryption, super user role, Admin features.",
+                      "Implemented one-one and one-many personalised notifcation (custom and automatic).",
+                    ],
+                    ["Tools Used", "Firebase, FCM , Retrofit"],
+                    ["Language Used", "Java, XML"],
+                  ]}
+                />
+              </div>
+              <div>
+                <ExperienceItem
+                  cardBackground={cardBackgroundColor}
+                  textColor={textColor}
+                  organization="NJACK IIT Patna"
+                  urlType="NJACK - Website"
+                  imageUrl={process.env.PUBLIC_URL + "/njack.jpg"}
+                  url="https://njack.iitp.ac.in/"
+                  details={[
+                    ["Role", "Club Coordinator"],
+                    ["Duration", "October 2021 - May 2023"],
+                  ]}
+                  details2={[
+                    [
+                      "Work",
+                      "Coordinator of Not Just Another Coding Klub (NJACK) DEV and Open-Source department.",
+                      "Organised India's one of the biggest Month long Hackathon - Codepeak (formly NWOC) with IIT Guwahati's Coding Club.",
+                      "Organized various dev related events in college.",
+                    ],
+                  ]}
+                />
+              </div>
             </div>
           </div>
         </div>
