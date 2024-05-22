@@ -7,9 +7,9 @@ export default function ExperienceItem(props) {
       style={{ backgroundColor: props.cardBackground, color: props.textColor }}
     >
       <div>
-        <p className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
+        <div className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
           <h3>{props.organization}</h3>
-        </p>
+        </div>
         <div
           className="container my-3 row m-0 p-0"
           style={{
@@ -52,7 +52,7 @@ export default function ExperienceItem(props) {
               {props.details &&
                 props.details.map((data, index) => {
                   return (
-                    <div className="mb-2 p-0" key={index}>
+                    <div className="mb-2 p-0" key={data}>
                       <div className="form-floating p-0 m-0">
                         <div
                           className="form-control"
@@ -66,7 +66,11 @@ export default function ExperienceItem(props) {
                           {data &&
                             data.map((res, idx) => {
                               return (
-                                idx !== 0 && <p className="m-0 p-0">{res}</p>
+                                idx !== 0 && (
+                                  <p key={data} className="m-0 p-0">
+                                    {res}
+                                  </p>
+                                )
                               );
                             })}
                         </div>
@@ -88,7 +92,7 @@ export default function ExperienceItem(props) {
           {props.details2 &&
             props.details2.map((data, index) => {
               return (
-                <div className="mb-2 p-0 " key={index}>
+                <div className="mb-2 p-0 " key={data}>
                   <div className="form-floating p-0 m-0">
                     <div
                       className="form-control"
@@ -102,7 +106,13 @@ export default function ExperienceItem(props) {
                     >
                       {data &&
                         data.map((res, idx) => {
-                          return idx !== 0 && <p className="m-0 p-0">{res}</p>;
+                          return (
+                            idx !== 0 && (
+                              <p key={idx} className="m-0 p-0">
+                                {res}
+                              </p>
+                            )
+                          );
                         })}
                     </div>
 

@@ -37,6 +37,55 @@ export default function Project(props) {
               <ProjectItem
                 cardBackground={cardBackgroundColor}
                 textColor={textColor}
+                imageUrl={"https://i.imgur.com/jUFX4Qt.jpeg"}
+                imageClickUrl={"https://i.imgur.com/jUFX4Qt.jpeg"}
+                name="Shield Pass - Password Manager"
+                details={[
+                  ["Theme", "Password Management Application"],
+                  [
+                    "Work",
+                    "Utilized Kotlin Compose Multiplatform to create Shield Pass, ensuring seamless functionality across Android, iOS, and desktop platforms",
+                    "Integrated dual authentication, encryption, and planned biometric authentication to safeguard user data and enhance security.",
+                    "Leveraged Jetpack Compose to build a user-friendly interface with responsive layouts optimized for various screen sizes like Android, iOs and Desktop.",
+                    "Used Jetpack Compose's WindowSize class to tailor the app's layout for various screen sizes, enhancing user experience across devices",
+                    "Deployed the web app on render, android app on Play store and Window's app on Github Release."
+                  ],
+                  ["Language used", "Kotlin, Javascript, Python"],
+                  [
+                    "Frameworks used",
+                    "Kotlin Multiplatform, Jetpack Compose, React Js, Express Js, Node Js",
+                  ],
+                ]}
+                language="Java, C++, XML"
+                tools="Firebase, OpenCv"
+                urlsData={[
+                  {
+                    url: "https://github.com/Sandeep03edu/PasswordManager",
+                    type: "Github",
+                  },
+                  {
+                    url: "https://play.google.com/store/apps/details?id=com.sandeep03edu.passwordmanager.android",
+                    type: "Play Store",
+                  },
+                  {
+                    url: "https://shield-pass.onrender.com/",
+                    type: "Web App",
+                  },
+                  {
+                    url: "https://github.com/Sandeep03edu/PasswordManager/releases/",
+                    type: "Github Release",
+                  },
+                  {
+                    url: "https://medium.com/@sandeep03edu/shield-pass-kotlin-compose-multiplatform-mobile-desktop-password-management-app-4f7190a3c7da/",
+                    type: "Medium",
+                  },
+                ]}
+              />
+            </div>
+            <div>
+              <ProjectItem
+                cardBackground={cardBackgroundColor}
+                textColor={textColor}
                 imageUrl={"https://i.imgur.com/GcGh9G8.png"}
                 imageClickUrl={"https://imgur.com/a/9sALJkF"}
                 name="Sky Chat, Web & Mobile"

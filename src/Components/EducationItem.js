@@ -79,7 +79,7 @@ export default function EducationItem(props) {
                       value={data[1]}
                       style={{ fontSize: "1rem" }}
                     />
-                    <label for="floatingLabel" style={{ fontSize: "1rem" }}>
+                    <label htmlFor="floatingLabel" style={{ fontSize: "1rem" }}>
                       {data[0]}
                     </label>
                   </div>

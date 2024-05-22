@@ -1,18 +1,6 @@
 import React from "react";
 
 export default function ProjectItem(props) {
-  let urlClass = "";
-  let size = "0%";
-
-  if (props.urlsData) {
-    let urlDataSize = 0;
-    urlDataSize = props.urlsData.length;
-    size = 100 / urlDataSize - 5 + "%";
-
-    urlDataSize = 12 / urlDataSize;
-    urlClass = "col-md-" + urlDataSize + "";
-  }
-
   return (
     <div
       style={{
@@ -22,9 +10,9 @@ export default function ProjectItem(props) {
         flexDirection: "column",
       }}
     >
-      <p className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
+      <div className="my-2 mx-0 centered" style={{ fontSize: "1.35rem" }}>
         <h3>{props.name}</h3>
-      </p>
+      </div>
       <div
         className="px-3 py-0 mb-5 row"
         style={{
@@ -113,12 +101,18 @@ export default function ProjectItem(props) {
                           overflowY: "auto",
                         }}
                       >
-                        {data &&
-                          data.map((res, idx) => {
-                            return (
-                              idx !== 0 && <p className="m-0 p-0">{res}</p>
-                            );
-                          })}
+                        <ul className="m-0 px-3">
+                          {data &&
+                            data.map((res, idx) => {
+                              return (
+                                idx !== 0 && (
+                                  <li key={res} className="mx-0 my-1 p-0">
+                                    {res}
+                                  </li>
+                                )
+                              );
+                            })}
+                        </ul>
                       </div>
 
                       <label
