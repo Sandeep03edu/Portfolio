@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Portfolio (v2)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Source for https://sandeep03edu.github.io/Portfolio/
 
-## Available Scripts
+Built with Vite, React, TypeScript, Tailwind CSS and Framer Motion. Each section looks like a terminal window. Its command types itself when you scroll to it, and the output appears as normal page content. There is a dark and a light theme, and an optional command palette (press `/` or `Ctrl K`).
 
-In the project directory, you can run:
+## Updating your details
 
-### `npm start`
+**All personal information lives in one file: `content/portfolio.json`.** The components only read from it. You never need to edit anything in `src/` to change text, dates, links or images.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Open the file in VS Code. It is linked to `content/portfolio.schema.json`, so you get autocomplete and a red underline if a field name or URL is wrong.
+- `npm run dev` and `npm run build` validate the file first. If something is off, the error tells you exactly which field is wrong.
+- Images go in `public/images/`. In the JSON, use only the file name (for example `"image": "shield-pass.webp"`).
+- Any link field is optional. If it is missing or `""`, the button is hidden.
+- If a list is empty (for example `"articles": []`), that whole section is hidden.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What each part of the file controls
 
-### `npm test`
+| Key | Shown in |
+| --- | --- |
+| `site` | Browser tab title, search/social preview, footer text, the `user@host` in prompts |
+| `profile` | Top section: name, title, intro line, rotating roles, photos |
+| `links` | Email, resume, and profile links (top section, contact section, command palette) |
+| `sections` | Order of sections, top-bar label, heading, the typed command and window title. Remove an entry to hide a section |
+| `about` | About paragraphs and the small facts box |
+| `experience` | Career timeline. `experienceVisible` sets how many show before "show all" |
+| `projects` | Project cards. `"featured": true` moves a project to the front |
+| `skills` | Skill groups |
+| `achievements` | Numbered achievements list |
+| `competitive` | Competitive programming cards |
+| `education` | Education cards |
+| `articles` | Writing section |
+| `contact` | Contact heading and message |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Examples
 
-### `npm run build`
+Add a new article:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```json
+"articles": [
+  {
+    "title": "My new article",
+    "summary": "One or two plain lines about what it covers.",
+    "date": "Nov 2026",
+    "readTime": "8 min read",
+    "platform": "Medium",
+    "url": "https://medium.com/@sandeep03edu/..."
+  }
+]
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add a GitHub link to an experience entry:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```json
+{ "id": "ramsena", "company": "Shree Ramsena", "github": "https://github.com/Sandeep03edu/Ramsena", ... }
+```
 
-### `npm run eject`
+Add a link button to a project:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```json
+"links": [
+  { "label": "GitHub", "url": "https://github.com/Sandeep03edu/..." },
+  { "label": "Demo", "url": "https://..." }
+]
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The icon is chosen automatically from the label or URL: GitHub, Play Store, Medium, YouTube, Certificate, Demo, Screenshots, Web App, Desktop App and Mobile App.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Commands
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install        # once
+npm run dev        # local preview with live reload
+npm run build      # validate content, type-check, build to dist/
+npm run preview    # serve the built site at http://localhost:4173/Portfolio/
+npm run deploy     # build and publish dist/ to the gh-pages branch (goes live)
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm run deploy` publishes to the `gh-pages` branch of this repository. GitHub Pages serves that branch, so the URL stays https://sandeep03edu.github.io/Portfolio/.

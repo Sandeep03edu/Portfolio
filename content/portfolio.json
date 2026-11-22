@@ -1,0 +1,753 @@
+{
+  "$schema": "./portfolio.schema.json",
+  "site": {
+    "title": "Sandeep Mishra | Product Security Engineer",
+    "description": "Sandeep Mishra is a Senior Associate Product Security Engineer at MathWorks India. He works on application security and penetration testing, and has built Android, web and cross-platform apps.",
+    "url": "https://sandeep03edu.github.io/Portfolio/",
+    "ogImage": "profile.jpg",
+    "terminalUser": "sandeep",
+    "terminalHost": "portfolio",
+    "footerNote": "Built by @Sandeep03edu"
+  },
+  "profile": {
+    "name": "Sandeep Mishra",
+    "handle": "Sandeep03edu",
+    "title": "Senior Associate Product Security Engineer",
+    "company": "MathWorks India",
+    "intro": "I work on product and application security at MathWorks. Before that, and alongside it, I have built Android, web and backend apps, and I like building tools that make security testing easier.",
+    "roles": [
+      "Product Security Engineer",
+      "Penetration Tester",
+      "Android Developer",
+      "Web Developer",
+      "Competitive Programmer",
+      "Electrical and Electronics Engineer"
+    ],
+    "photo": "profile.jpg"
+  },
+  "links": {
+    "email": "sandeep03edu@gmail.com",
+    "resume": "https://bit.ly/Sandeep_Mishra_Resume",
+    "linkedin": "https://www.linkedin.com/in/sandeep03edu/",
+    "github": "https://github.com/Sandeep03edu",
+    "instagram": "https://www.instagram.com/sandeep03edu",
+    "medium": "https://medium.com/@sandeep03edu",
+    "codeforces": "https://codeforces.com/profile/sandeep03edu",
+    "leetcode": "https://leetcode.com/sandeep03edu/",
+    "atcoder": "https://atcoder.jp/users/sandeep03edu"
+  },
+  "sections": [
+    {
+      "id": "whoami",
+      "nav": "whoami",
+      "heading": "Hello",
+      "command": "whoami",
+      "window": "~/sandeep"
+    },
+    {
+      "id": "about",
+      "nav": "about",
+      "heading": "About me",
+      "command": "cat about.md",
+      "window": "~/sandeep/about.md"
+    },
+    {
+      "id": "experience",
+      "nav": "experience",
+      "heading": "Experience",
+      "command": "git log --career",
+      "window": "~/sandeep/career"
+    },
+    {
+      "id": "projects",
+      "nav": "projects",
+      "heading": "Projects",
+      "command": "ls ~/projects",
+      "window": "~/sandeep/projects"
+    },
+    {
+      "id": "skills",
+      "nav": "skills",
+      "heading": "Skills",
+      "command": "./skills --tree",
+      "window": "~/sandeep/skills"
+    },
+    {
+      "id": "achievements",
+      "nav": "achievements",
+      "heading": "Achievements",
+      "command": "cat achievements.txt",
+      "window": "~/sandeep/achievements.txt"
+    },
+    {
+      "id": "competitive",
+      "nav": "cp",
+      "heading": "Competitive programming",
+      "command": "stats --competitive",
+      "window": "~/sandeep/competitive-programming"
+    },
+    {
+      "id": "education",
+      "nav": "education",
+      "heading": "Education",
+      "command": "cat education.json",
+      "window": "~/sandeep/education.json"
+    },
+    {
+      "id": "writing",
+      "nav": "writing",
+      "heading": "Writing",
+      "command": "ls ~/writing",
+      "window": "~/sandeep/writing"
+    },
+    {
+      "id": "contact",
+      "nav": "contact",
+      "heading": "Contact",
+      "command": "ping sandeep",
+      "window": "~/sandeep/contact"
+    }
+  ],
+  "about": {
+    "paragraphs": [
+      "I'm a Senior Associate Product Security Engineer at MathWorks India with a background in Software Development and a degree in Electrical and Electronics Engineering from IIT Patna.",
+      "My current work primarily focuses on product and application security. I perform security assessments and hands-on penetration testing across multiple web applications, including assessments supporting SOC 2 Type II reviews. This involves understanding application functionality, identifying security weaknesses, reviewing areas such as API design and access control, and working with development teams to address security issues.",
+      "I've also been developing AI-assisted workflows to support application security assessments. The idea is to combine automation, security tools, and manual validation to make parts of the testing process more efficient and repeatable. I'm particularly interested in exploring how AI agents can assist with security analysis without taking away the importance of human validation and practical testing.",
+      "Alongside my security work, I've spent considerable time developing applications across Android, web, and backend technologies. Some of the projects I've worked on include Highway Watch, an Android application developed for Manipur Police to support highway patrolling through real-time vehicle tracking and a web-based monitoring panel, and Shield Pass, a cross-platform password manager built using Kotlin Multiplatform and the MERN stack.",
+      "I also worked on an Android security project with the Indian Army, focusing on malware analysis and reverse engineering. This involved studying Android malware, performing static and dynamic analysis, monitoring network traffic, and modifying application code using Smali.",
+      "More recently, I've been building CyberVM-AI, a project exploring reproducible penetration-testing environments and the integration of local and cloud-based LLMs into security workflows.",
+      "I enjoy working at the intersection of software development and cybersecurity, whether that means understanding how an application is built, finding security weaknesses, or building tools that make security testing easier. I'm always interested in learning new technologies and exploring practical security challenges."
+    ],
+    "labels": [
+      "security work",
+      "ai-assisted workflows",
+      "building apps",
+      "indian army",
+      "cybervm-ai",
+      "what i enjoy"
+    ],
+    "facts": [
+      {
+        "label": "Now",
+        "value": "Senior Associate Product Security Engineer, MathWorks India"
+      },
+      {
+        "label": "Focus",
+        "value": "Product and application security, penetration testing"
+      },
+      {
+        "label": "Also",
+        "value": "Android, web and backend development"
+      },
+      {
+        "label": "Studied",
+        "value": "B.Tech, Electrical and Electronics Engineering, IIT Patna (2020 - 2024)"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": "mathworks-pse",
+      "company": "MathWorks",
+      "companyUrl": "https://www.mathworks.com/",
+      "role": "Senior Associate Product Security Engineer",
+      "start": "Jul 2024",
+      "end": "Present",
+      "logo": "mathworks.webp",
+      "points": [
+        "Run security assessments and hands-on penetration tests across multiple web applications, including assessments that support SOC 2 Type II reviews.",
+        "Start by understanding how an application works, then look for security weaknesses in areas like API design, authentication and access control.",
+        "Review application design and APIs with development teams and work with them to fix the security issues found.",
+        "Help respond to CVEs, zero-days and threats seen in the wild by finding the affected applications and repositories and coordinating the fix.",
+        "Build AI-assisted workflows that combine automation, security tools and manual validation, so parts of the testing process become faster and repeatable."
+      ],
+      "tools": [
+        "Burp Suite",
+        "Semgrep",
+        "TruffleHog",
+        "Playwright",
+        "Python",
+        "Wiz",
+        "JFrog Xray",
+        "Black Duck"
+      ],
+      "languages": [],
+      "links": [],
+      "github": ""
+    },
+    {
+      "id": "mathworks-intern",
+      "company": "MathWorks",
+      "companyUrl": "https://www.mathworks.com/",
+      "role": "EDG Intern",
+      "start": "May 2023",
+      "end": "Jul 2023",
+      "logo": "mathworks.webp",
+      "points": [
+        "Worked on the user interface for target management in Simulink Real-Time Explorer.",
+        "Improved the Explorer GUI using MATLAB App Designer, including log management and usability changes that shipped in MATLAB R2024a.",
+        "Wrote C++ backend APIs that talk to the target machine over TCP/IP and SSH (PuTTY).",
+        "Added automated tests for Explorer GUI actions and backend API calls using the MATLAB testing framework."
+      ],
+      "tools": [
+        "MATLAB App Designer",
+        "Simulink",
+        "MATLAB GUI"
+      ],
+      "languages": [
+        "MATLAB",
+        "C++"
+      ],
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "https://drive.google.com/file/d/1acCiod5-fUc1rjB39_WfZqW0ZsJCN1Ld/view"
+        }
+      ]
+    },
+    {
+      "id": "indian-army",
+      "company": "Indian Army",
+      "role": "Project Intern, Android Security",
+      "start": "Jul 2021",
+      "end": "Sep 2023",
+      "logo": "indian-army.webp",
+      "points": [
+        "Studied Android malware such as Anubis and VajraSpy to understand how it injects code, evades detection and gets past Play Store checks.",
+        "Did static and dynamic analysis of the samples, including watching their network traffic.",
+        "Built proof-of-concept versions of working malware to test how they behave.",
+        "Patched Android apps by editing Smali code, including bypassing SSL pinning and root detection.",
+        "Learned how Android works internally and where its security gaps are."
+      ],
+      "tools": [
+        "Apktool",
+        "Frida",
+        "JADX",
+        "JD-GUI",
+        "DexGuard",
+        "MobSF",
+        "Retrofit"
+      ],
+      "languages": [
+        "Java",
+        "Kotlin",
+        "XML",
+        "C++",
+        "Smali",
+        "SQLite"
+      ],
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "https://drive.google.com/file/d/1GG3aImLWPqQCCX1ZPVX9nIycRrzDPt8y/view"
+        }
+      ]
+    },
+    {
+      "id": "ramsena",
+      "company": "Shree Ramsena",
+      "role": "Intern",
+      "start": "Jan 2022",
+      "end": "May 2023",
+      "logo": "ramsena.webp",
+      "points": [
+        "Built a complete social media app, first on PHP APIs and later on Firebase, showing posts based on each user's interests.",
+        "Added encrypted live chat, plus super user and admin roles.",
+        "Set up personalised notifications, one-to-one and one-to-many, sent both manually and automatically."
+      ],
+      "tools": [
+        "Firebase",
+        "FCM",
+        "Retrofit"
+      ],
+      "languages": [
+        "Java",
+        "XML"
+      ],
+      "links": [],
+      "github": ""
+    },
+    {
+      "id": "njack",
+      "company": "NJACK, IIT Patna",
+      "role": "Club Coordinator",
+      "start": "Oct 2021",
+      "end": "May 2023",
+      "logo": "njack.webp",
+      "points": [
+        "Coordinated the DEV and Open-Source department of NJACK (Not Just Another Coding Klub), the coding club of IIT Patna.",
+        "Organised Codepeak (formerly NWOC), one of India's biggest month-long hackathons, together with IIT Guwahati's coding club.",
+        "Organised other development events in college."
+      ],
+      "tools": [],
+      "languages": [],
+      "links": [
+        {
+          "label": "NJACK website",
+          "url": "https://njack.iitp.ac.in/"
+        }
+      ]
+    }
+  ],
+  "experienceVisible": 3,
+  "projects": [
+    {
+      "id": "cybervm-ai",
+      "name": "CyberVM-AI",
+      "tagline": "A reproducible, AI-assisted penetration-testing lab on Kali Linux",
+      "context": "Personal project",
+      "start": "Aug 2026",
+      "end": "Oct 2026",
+      "image": "",
+      "points": [
+        "Set up a Kali penetration-testing lab with Ansible, VirtualBox and Bash. Each engagement gets a fresh, disposable VM, and the toolchain (including Burp Suite and Playwright MCP) is version-controlled and checksum-verified.",
+        "Connected local and cloud LLMs through OpenCode, with a FastAPI and Qdrant RAG service that pulls in NVD, CISA KEV, EPSS and MITRE ATT&CK data.",
+        "Kept the lab contained with network isolation, host firewall allow-listing, and credentials that are only injected at runtime."
+      ],
+      "languages": [
+        "Bash",
+        "Python"
+      ],
+      "stack": [
+        "Ansible",
+        "VirtualBox",
+        "Kali Linux",
+        "OpenCode",
+        "Ollama",
+        "FastAPI",
+        "Qdrant",
+        "Burp Suite",
+        "Playwright MCP"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Sandeep03edu/CyberVM-AI"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "shield-pass",
+      "name": "Shield Pass",
+      "tagline": "Password manager for Android, iOS, desktop and web",
+      "context": "Personal project",
+      "start": "Dec 2023",
+      "end": "May 2024",
+      "image": "shield-pass.webp",
+      "points": [
+        "Built Shield Pass with Kotlin Compose Multiplatform, so one codebase runs on Android, iOS and desktop.",
+        "Protected saved passwords with dual authentication (a login PIN and an app PIN), AES encryption and Blake2b hashing, with encrypted cloud sync across devices. Biometric login is planned.",
+        "Used Jetpack Compose and its WindowSize class so the layout adapts to phones, tablets and desktop screens.",
+        "Built the web version with the MERN stack (React, Express, Node.js, MongoDB).",
+        "Deployed the web app on Render (with a cron job to keep it awake), the Android app on the Play Store and the Windows app on GitHub Releases."
+      ],
+      "languages": [
+        "Kotlin",
+        "JavaScript",
+        "Python"
+      ],
+      "stack": [
+        "Kotlin Multiplatform",
+        "Jetpack Compose",
+        "React",
+        "Express",
+        "Node.js",
+        "MongoDB"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Sandeep03edu/PasswordManager"
+        },
+        {
+          "label": "Play Store",
+          "url": "https://play.google.com/store/apps/details?id=com.sandeep03edu.passwordmanager.android"
+        },
+        {
+          "label": "Web App",
+          "url": "https://shield-pass.onrender.com/"
+        },
+        {
+          "label": "Desktop App",
+          "url": "https://github.com/Sandeep03edu/PasswordManager/releases/"
+        },
+        {
+          "label": "Promo Video",
+          "url": "https://www.youtube.com/watch?v=BhAnsO3KzNA"
+        },
+        {
+          "label": "Medium Article",
+          "url": "https://medium.com/@sandeep03edu/shield-pass-kotlin-compose-multiplatform-mobile-desktop-password-management-app-4f7190a3c7da"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "highway-watch",
+      "name": "Highway Watch",
+      "tagline": "Live patrol vehicle tracking for Manipur Police",
+      "context": "Built for Manipur Police",
+      "start": "Jan 2023",
+      "end": "Feb 2023",
+      "image": "highway-watch.webp",
+      "points": [
+        "Built an Android app for Manipur Police that tracks patrol vehicles live, organised by vehicle, highway and sector.",
+        "Made the background location service memory-efficient so it keeps sending updates around the clock.",
+        "Used Firebase to store and serve the live location data.",
+        "Built a web panel to watch live locations and look through location logs."
+      ],
+      "languages": [
+        "Java",
+        "XML"
+      ],
+      "stack": [
+        "Android",
+        "Firebase"
+      ],
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "https://drive.google.com/file/d/1rLXh56AkImqtqyGEK7z4sAuCkEmJT1oy/view"
+        },
+        {
+          "label": "Screenshots",
+          "url": "https://photos.app.goo.gl/iLkHuCf91Mu3LDtR6"
+        }
+      ],
+      "featured": true,
+      "team": [
+        {
+          "label": "Wasim Memon",
+          "url": "https://www.linkedin.com/in/wasim-memon-4349a11a7/"
+        },
+        {
+          "label": "Jeet Shah",
+          "url": "https://www.linkedin.com/in/jeet-shah-29732183/"
+        },
+        {
+          "label": "Osho Jain",
+          "url": "https://www.linkedin.com/in/osho-jain-1a9260a4/"
+        }
+      ]
+    },
+    {
+      "id": "sky-chat",
+      "name": "Sky Chat",
+      "tagline": "Real-time chat app for web and mobile",
+      "context": "Personal project",
+      "start": "",
+      "end": "",
+      "image": "sky-chat.webp",
+      "points": [
+        "Built a real-time chat app using REST APIs and WebSockets.",
+        "Secured the backend APIs with JWT authentication.",
+        "Shipped it on the web with the MERN stack and on mobile with React Native."
+      ],
+      "languages": [
+        "JavaScript"
+      ],
+      "stack": [
+        "React",
+        "Express",
+        "Node.js",
+        "MongoDB",
+        "React Native"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Sandeep03edu/SkyChat"
+        },
+        {
+          "label": "Web App",
+          "url": "https://sky-chat-app.onrender.com/"
+        },
+        {
+          "label": "Mobile App",
+          "url": "https://expo.dev/accounts/sandeep03edu/projects/Sky_Chat_App/updates/870f4447-0ce1-42cd-9e22-082bb16c281d"
+        },
+        {
+          "label": "Screenshots",
+          "url": "https://imgur.com/a/9sALJkF"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "id": "testa",
+      "name": "Testa",
+      "tagline": "Obscene media detector for Android",
+      "context": "With Prof. Joydeep Chandra, IIT Patna",
+      "contextUrl": "https://www.iitp.ac.in/~joydeep/",
+      "start": "Jan 2022",
+      "end": "Jun 2023",
+      "image": "testa.webp",
+      "points": [
+        "Ran a TensorFlow model on Android to give each image an obscenity score.",
+        "Scanned the user's media files and filtered out obscene images in a folder.",
+        "Generated a PDF report listing the flagged images and their scores."
+      ],
+      "languages": [
+        "Java",
+        "C++",
+        "XML"
+      ],
+      "stack": [
+        "Android",
+        "TensorFlow",
+        "Firebase"
+      ],
+      "links": [
+        {
+          "label": "Certificate",
+          "url": "https://drive.google.com/file/d/1DgB_CjH5wZx87YbF1mVrIThU9H8ziaxE/view"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "id": "face-disease",
+      "name": "Face Disease Recognition",
+      "tagline": "Android app that detects facial diseases",
+      "context": "Microsoft Engage'22",
+      "start": "",
+      "end": "",
+      "image": "face-disease.webp",
+      "points": [
+        "Built an Android app that detects facial diseases using OpenCV and ML models.",
+        "Split the face into 68 landmarks and cropped each part of the face for detection.",
+        "Saved each user's results to a backend so past history can be reviewed later.",
+        "Showed ads from the backend based on the age and gender of the person in front of the camera."
+      ],
+      "languages": [
+        "Java",
+        "C++",
+        "XML"
+      ],
+      "stack": [
+        "Android",
+        "OpenCV",
+        "Firebase"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Sandeep03edu/FaceRecognition/"
+        },
+        {
+          "label": "Screenshot",
+          "url": "https://user-images.githubusercontent.com/73837113/170855211-7e096c32-e890-4ae4-a1ae-1b07df3bab86.jpg"
+        }
+      ],
+      "featured": false
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "items": [
+        "C/C++",
+        "Java",
+        "Kotlin",
+        "Python",
+        "JavaScript",
+        "MATLAB"
+      ]
+    },
+    {
+      "group": "Security",
+      "items": [
+        "Web/API Security",
+        "Mobile Security",
+        "Penetration Testing",
+        "SAST/DAST",
+        "SOC 2",
+        "AuthN/AuthZ",
+        "OAuth",
+        "SSRF",
+        "XSS",
+        "CSRF",
+        "IDOR",
+        "XXE",
+        "SQL/OS Injection",
+        "DNS Rebinding/TOCTOU"
+      ]
+    },
+    {
+      "group": "Security Tools",
+      "items": [
+        "Burp Suite",
+        "Semgrep",
+        "TruffleHog",
+        "Playwright",
+        "Frida",
+        "JADX",
+        "Apktool",
+        "MobSF",
+        "Objection",
+        "ADB",
+        "JFrog Xray",
+        "Black Duck",
+        "Wiz"
+      ]
+    },
+    {
+      "group": "Development",
+      "items": [
+        "Android",
+        "Kotlin Multiplatform",
+        "Jetpack Compose",
+        "React",
+        "React Native",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Firebase",
+        "REST APIs",
+        "Git",
+        "Docker",
+        "AWS"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Guided the TrackOn app",
+      "detail": "Guided college juniors in building TrackOn, an Android app for lost and found at college.",
+      "links": [],
+      "github": ""
+    },
+    {
+      "title": "Microsoft Engage'22",
+      "detail": "Selected as a mentee for the Microsoft Engage 2022 program.",
+      "links": [
+        {
+          "label": "Program",
+          "url": "https://acehacker.com/microsoft/engage2022/"
+        }
+      ]
+    },
+    {
+      "title": "Jumpstart 2022, Publicis Sapient",
+      "detail": "Shortlisted among the top performers out of 29,862 candidates.",
+      "links": [
+        {
+          "label": "Event",
+          "url": "https://unstop.com/hackathon/hackathon-jumpstart-publicis-sapient-359785"
+        }
+      ]
+    },
+    {
+      "title": "JEE Advanced 2020",
+      "detail": "All India Rank 8823 out of more than 0.17 million candidates.",
+      "links": []
+    },
+    {
+      "title": "Honoured by the Delhi Chief Minister and Deputy Chief Minister",
+      "detail": "For clearing JEE Advanced 2020 from a government school without any coaching.",
+      "links": [
+        {
+          "label": "Post",
+          "url": "https://twitter.com/msisodia/status/1319999572953890816"
+        }
+      ]
+    },
+    {
+      "title": "Mental Maths, state level",
+      "detail": "Winner in 2017 and 2nd runner-up in 2018.",
+      "links": []
+    },
+    {
+      "title": "50+ public GitHub repositories",
+      "detail": "Projects across Android, web, backend and security.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Sandeep03edu"
+        }
+      ]
+    }
+  ],
+  "competitive": [
+    {
+      "platform": "Codeforces",
+      "handle": "Sandeep03edu",
+      "profileUrl": "https://codeforces.com/profile/sandeep03edu",
+      "rating": "1552",
+      "rank": "Specialist",
+      "bestRank": "432",
+      "bestContest": "Codeforces Round 820 (Div. 3)",
+      "bestContestUrl": "https://codeforces.com/contest/1729/standings/participant/140126541#p140126541"
+    },
+    {
+      "platform": "LeetCode",
+      "handle": "Sandeep03edu",
+      "profileUrl": "https://leetcode.com/sandeep03edu/",
+      "rating": "1910",
+      "rank": "Knight",
+      "bestRank": "561",
+      "bestContest": "Biweekly Contest 109",
+      "bestContestUrl": "https://leetcode.com/contest/biweekly-contest-109/ranking"
+    },
+    {
+      "platform": "AtCoder",
+      "handle": "Sandeep03edu",
+      "profileUrl": "https://atcoder.jp/users/sandeep03edu",
+      "rating": "1017",
+      "rank": "5 Kyu",
+      "bestRank": "736",
+      "bestContest": "Toyota AtCoder Beginner Contest 311",
+      "bestContestUrl": "https://atcoder.jp/contests/abc311/standings?watching=sandeep03edu"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indian Institute of Technology (IIT) Patna",
+      "url": "https://www.iitp.ac.in/",
+      "image": "iitp-campus.webp",
+      "level": "College",
+      "degree": "B.Tech, Electrical and Electronics Engineering",
+      "start": "Nov 2020",
+      "end": "May 2024",
+      "location": "Patna, India",
+      "scoreLabel": "CPI",
+      "score": "8.77"
+    },
+    {
+      "institution": "Rajkiya Pratibha Vikas Vidyalaya, A-6 Paschim Vihar",
+      "url": "https://www.facebook.com/rpvvpaschimvihar/",
+      "image": "rpvv.webp",
+      "level": "Intermediate",
+      "degree": "Class 12, Central Board of Secondary Education (CBSE)",
+      "start": "2018",
+      "end": "2020",
+      "location": "Delhi, India",
+      "scoreLabel": "Percentage",
+      "score": "95.8%"
+    }
+  ],
+  "articles": [
+    {
+      "title": "How I Solved the Indian Army Terrier Cyber Quest 2026 Web Challenges",
+      "summary": "A walkthrough of how I solved three web challenges from Terrier Cyber Quest 2026: prototype pollution past a WAF in a Node.js app, a SQL injection login bypass where the checks only ran in the browser, and getting around a keyword-based SQL injection filter.",
+      "date": "Nov 2026",
+      "readTime": "17 min read",
+      "platform": "Medium",
+      "url": "https://medium.com/@sandeep03edu/how-i-solved-the-indian-army-terrier-cyber-quest-2026-web-challenges-9a7f360662b7"
+    },
+    {
+      "title": "Shield Pass: Kotlin Compose Multiplatform (Mobile + Desktop) Password Management App",
+      "summary": "How I built Shield Pass: dual PIN authentication, AES and Blake2b encryption, sync across devices, and deploying it to the Play Store, GitHub and Render.",
+      "date": "May 2024",
+      "readTime": "12 min read",
+      "platform": "Medium",
+      "url": "https://medium.com/@sandeep03edu/shield-pass-kotlin-compose-multiplatform-mobile-desktop-password-management-app-4f7190a3c7da"
+    }
+  ],
+  "contact": {
+    "heading": "Get in touch",
+    "message": "If you want to talk about security, a project, or an opportunity, email is the quickest way to reach me. I'm also on LinkedIn."
+  }
+}

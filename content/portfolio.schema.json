@@ -1,0 +1,573 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Portfolio content",
+  "description": "Every piece of personal information shown on the portfolio. Edit this file, not the components.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "site",
+    "profile",
+    "links",
+    "sections",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "achievements",
+    "competitive",
+    "education",
+    "articles",
+    "contact"
+  ],
+  "definitions": {
+    "nonEmpty": {
+      "type": "string",
+      "minLength": 1
+    },
+    "optionalUrl": {
+      "description": "Leave empty (\"\") or remove the field to hide it on the site.",
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 0
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        }
+      ]
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "image": {
+      "description": "File name inside public/images/. Leave empty for no image.",
+      "type": "string",
+      "pattern": "^$|^[A-Za-z0-9._-]+\\.(webp|png|jpe?g|svg)$"
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "url"
+      ],
+      "properties": {
+        "label": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "url": {
+          "$ref": "#/definitions/url"
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/link"
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/nonEmpty"
+      }
+    }
+  },
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "description",
+        "url",
+        "ogImage",
+        "terminalUser",
+        "terminalHost",
+        "footerNote"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "description": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "url": {
+          "$ref": "#/definitions/url"
+        },
+        "ogImage": {
+          "$ref": "#/definitions/image"
+        },
+        "terminalUser": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "terminalHost": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "footerNote": {
+          "type": "string"
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "handle",
+        "title",
+        "company",
+        "intro",
+        "roles",
+        "photo"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "handle": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "title": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "company": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "intro": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "roles": {
+          "$ref": "#/definitions/stringList"
+        },
+        "photo": {
+          "$ref": "#/definitions/image"
+        },
+        "avatar": {
+          "$ref": "#/definitions/image",
+          "description": "Optional second photo shown in the About sidebar. Leave out for none."
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "resume": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "linkedin": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "github": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "instagram": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "medium": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "codeforces": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "leetcode": {
+          "$ref": "#/definitions/optionalUrl"
+        },
+        "atcoder": {
+          "$ref": "#/definitions/optionalUrl"
+        }
+      }
+    },
+    "sections": {
+      "description": "Order of sections on the page, and the command/window title each one shows. Remove an entry to hide that section.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "nav",
+          "heading",
+          "command",
+          "window"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "whoami",
+              "about",
+              "experience",
+              "projects",
+              "skills",
+              "achievements",
+              "competitive",
+              "education",
+              "writing",
+              "contact"
+            ]
+          },
+          "nav": {
+            "$ref": "#/definitions/nonEmpty",
+            "description": "Short label in the top bar."
+          },
+          "heading": {
+            "$ref": "#/definitions/nonEmpty",
+            "description": "Section heading shown under the command."
+          },
+          "command": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "window": {
+            "$ref": "#/definitions/nonEmpty"
+          }
+        }
+      }
+    },
+    "about": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "paragraphs",
+        "facts"
+      ],
+      "properties": {
+        "paragraphs": {
+          "$ref": "#/definitions/stringList"
+        },
+        "facts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "value"
+            ],
+            "properties": {
+              "label": {
+                "$ref": "#/definitions/nonEmpty"
+              },
+              "value": {
+                "$ref": "#/definitions/nonEmpty"
+              }
+            }
+          }
+        },
+        "labels": {
+          "description": "Optional short labels for the paragraph cards, one per paragraph after the first (shown as // label).",
+          "$ref": "#/definitions/stringList"
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "company",
+          "role",
+          "start",
+          "end",
+          "logo",
+          "points"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "company": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "companyUrl": {
+            "$ref": "#/definitions/optionalUrl"
+          },
+          "role": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "start": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "end": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "logo": {
+            "$ref": "#/definitions/image"
+          },
+          "points": {
+            "$ref": "#/definitions/stringList"
+          },
+          "tools": {
+            "$ref": "#/definitions/stringList"
+          },
+          "languages": {
+            "$ref": "#/definitions/stringList"
+          },
+          "links": {
+            "$ref": "#/definitions/links"
+          },
+          "github": {
+            "$ref": "#/definitions/optionalUrl"
+          }
+        }
+      }
+    },
+    "experienceVisible": {
+      "description": "How many experience entries show before 'show all'.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "tagline",
+          "points",
+          "links"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "name": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "tagline": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "context": {
+            "type": "string"
+          },
+          "contextUrl": {
+            "$ref": "#/definitions/optionalUrl"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          },
+          "image": {
+            "$ref": "#/definitions/image"
+          },
+          "points": {
+            "$ref": "#/definitions/stringList"
+          },
+          "languages": {
+            "$ref": "#/definitions/stringList"
+          },
+          "stack": {
+            "$ref": "#/definitions/stringList"
+          },
+          "links": {
+            "$ref": "#/definitions/links"
+          },
+          "featured": {
+            "type": "boolean"
+          },
+          "team": {
+            "description": "People who worked on the project with you. Each needs a label (name) and url (profile link).",
+            "$ref": "#/definitions/links"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "group",
+          "items"
+        ],
+        "properties": {
+          "group": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "items": {
+            "$ref": "#/definitions/stringList"
+          }
+        }
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "detail"
+        ],
+        "properties": {
+          "title": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "detail": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "links": {
+            "$ref": "#/definitions/links"
+          },
+          "github": {
+            "$ref": "#/definitions/optionalUrl"
+          }
+        }
+      }
+    },
+    "competitive": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "platform",
+          "handle",
+          "profileUrl",
+          "rating",
+          "rank"
+        ],
+        "properties": {
+          "platform": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "handle": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "profileUrl": {
+            "$ref": "#/definitions/url"
+          },
+          "rating": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "rank": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "bestRank": {
+            "type": "string"
+          },
+          "bestContest": {
+            "type": "string"
+          },
+          "bestContestUrl": {
+            "$ref": "#/definitions/optionalUrl"
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "institution",
+          "degree",
+          "start",
+          "end"
+        ],
+        "properties": {
+          "institution": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "url": {
+            "$ref": "#/definitions/optionalUrl"
+          },
+          "image": {
+            "$ref": "#/definitions/image"
+          },
+          "level": {
+            "type": "string"
+          },
+          "degree": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "start": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "end": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "location": {
+            "type": "string"
+          },
+          "scoreLabel": {
+            "type": "string"
+          },
+          "score": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "$ref": "#/definitions/nonEmpty"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "readTime": {
+            "type": "string"
+          },
+          "platform": {
+            "type": "string"
+          },
+          "url": {
+            "$ref": "#/definitions/url"
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heading",
+        "message"
+      ],
+      "properties": {
+        "heading": {
+          "$ref": "#/definitions/nonEmpty"
+        },
+        "message": {
+          "$ref": "#/definitions/nonEmpty"
+        }
+      }
+    }
+  }
+}
